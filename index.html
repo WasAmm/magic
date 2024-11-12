@@ -1,0 +1,1513 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mainstage</title>
+    <link href='style.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/opus-media-recorder@latest/OpusMediaRecorder.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/opus-media-recorder@latest/encoderWorker.umd.js"></script>
+
+    <script src="MediaRecorder.js"></script>
+</head>
+
+<body style="margin: 0;overflow: hidden;"><!--画面の中-->
+
+    <!--スタート画面　仮完成-->
+    <div style="position: relative;height: 1080px;width: 1920px;display: block; background-image: url(title.png);"
+        id="startscreen">
+        <!--タイトルの所(後で画像挿入)-->
+        <div style="position: absolute;height: 664px;width: 1920px;top: 300px; left: 510px; font-size: 100px;">Have
+            magic power!</div>
+        <!--スタートボタン-->
+        <div style="position: absolute;height: 100px;width: 650px;top: 797px;left: 600px; background-color: #99a6c990; font-size: 80px;"
+            id="start_botton">~ Tap to start ~</div>
+    </div>
+
+    <!--あらすじ画面１　画像を入れるのかHTMLで書くのかによって変化する-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-image: url(summary-1.png); display:none;"
+        id="OP1">
+        <!--あらすじをスキップするボタン-->
+        <div style="position: absolute;height: 39px;width: 448px;top: 20px;right: 123px;color: white; font-size: 39px; line-height: 1; "
+            name="OP_skip"> あらすじをスキップする</div>
+        <!--文章-->
+        <div
+            style="position: absolute;height: 268px;width: 1800px;top: 183px;left: 111px;color: white; font-size: 100px; line-height: 1;">
+            今日は、10月19日。<br>　ついに迎えたＩＴ未来高校<br>　　文化祭2日目。</div>
+
+        <!--一つ先に進むボタン-->
+        <div style="position: absolute;height: 38px;width: 287px;top: 1030px;right: 114px;color: white;font-size: 39px; line-height: 1;"
+            id="OP1_front">一つ先にすすむ</div>
+        <!--一つ前に戻るボタン-->
+        <div style="position: absolute;height: 38px;width: 390px;top: 1030px;left: 111px;color: white;font-size: 39px; line-height: 1;"
+            id="OP1_back">タイトル画面にもどる</div>
+    </div>
+
+
+
+
+    <!--あらすじ画面２　画像を入れるのかHTMLで書くのかによって変化する-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-image: url(summary-2.png); display:none;"
+        id="OP2">
+        <!--あらすじをスキップするボタン-->
+        <div style="position: absolute;height: 39px;width: 448px;top: 20px;right: 123px;color: white; font-size: 39px; line-height: 1; "
+            name="OP_skip"> あらすじをスキップする</div>
+        <!--文章-->
+        <div
+            style="position: absolute;height: 268px;width: 1700px;top: 183px;left: 111px;color: white; font-size: 66px; line-height: 1;">
+            …だったのだが、<br>開発中のプログラミングにバグが発生し、<br>モンスターが発生してしまった！</div>
+        <!--一つ先に進むボタン-->
+        <div style="position: absolute;height: 38px;width: 287px;top: 1030px;right: 114px;color: white;font-size: 39px; line-height: 1;"
+            id="OP2_front">一つ先にすすむ</div>
+        <!--一つ前に戻るボタン-->
+        <div style="position: absolute;height: 38px;width: 283px;top: 1030px;left: 111px;color: white;font-size: 39px; line-height: 1;"
+            id="OP2_back">一つ前にもどる</div>
+    </div>
+
+
+
+
+    <!--あらすじ画面3　画像を入れるのかHTMLで書くのかによって変化する-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-image: url(summary-3.png); display:none;"
+        id="OP3">
+        <!--あらすじをスキップするボタン-->
+        <div style="position: absolute;height: 39px;width: 448px;top: 20px;right: 123px;color: white; font-size: 39px; line-height: 1; "
+            name="OP_skip"> あらすじをスキップする</div>
+        <!--文章-->
+        <div
+            style="position: absolute;height: 268px;width: 1076px;top: 183px;left: 111px;color: white; font-size: 66px; line-height: 1;">
+            1時間後には受付が<br>　始まってしまう…。<br>この文化祭を成功させなければ、<br>ＩＴ未来高校の明日はない…！</div>
+        <!--一つ先に進むボタン-->
+        <div style="position: absolute;height: 38px;width: 287px;top: 1030px;right: 114px;color: white;font-size: 39px; line-height: 1;"
+            id="OP3_front">一つ先にすすむ</div>
+        <!--一つ前に戻るボタン-->
+        <div style="position: absolute;height: 38px;width: 283px;top: 1030px;left: 111px;color: white;font-size: 39px; line-height: 1;"
+            id="OP3_back">一つ前にもどる</div>
+    </div>
+
+
+
+
+    <!--あらすじ画面4　画像を入れるのかHTMLで書くのかによって変化する-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-image: url(summary-4.png); display:none;"
+        id="OP4">
+        <!--あらすじをスキップするボタン-->
+        <div style="position: absolute;height: 39px;width: 448px;top: 20px;right: 123px;color: white; font-size: 39px; line-height: 1; "
+            name="OP_skip"> あらすじをスキップする</div>
+        <!--文章-->
+        <div
+            style="position: absolute;height: 268px;width: 1020px;top: 183px;left: 111px;color: white; font-size: 66px; line-height: 1;">
+            これを見ている勇敢なそこの君！<br>今から授ける魔法の力で<br>モンスターをたおしてくれ！</div>
+        <!--一つ先に進むボタン-->
+        <div style="position: absolute;height: 38px;width: 287px;top: 1030px;right: 114px;color: white;font-size: 39px; line-height: 1;"
+            id="OP4_front">一つ先にすすむ</div>
+        <!--一つ前に戻るボタン-->
+        <div style="position: absolute;height: 38px;width: 283px;top: 1030px;left: 111px;color: white;font-size: 39px; line-height: 1;"
+            id="OP4_back">一つ前にもどる</div>
+    </div>
+
+
+
+
+    <!--あらすじ画面5　（最終画面）-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-image: url(summary-5.png); display:none;"
+        id="OP5">
+        <!--あらすじをスキップするボタン-->
+        <div style="position: absolute;height: 39px;width: 448px;top: 20px;right: 123px;color: white; font-size: 39px; line-height: 1; "
+            name="OP_skip"> あらすじをスキップする</div>
+        <!--文章-->
+        <div
+            style="position: absolute;height: 456px;width: 1570px;top: 251px;left: 243px;color: white; font-size: 117px; line-height: 1;">
+            それでは頼んだぞ！<br>よい報告を期待している。<br>頑張ってくれ！！</div>
+        <!--ゲーム画面に進むボタン-->
+        <div style="position: absolute;height: 38px;width: 450px;top: 1030px;right: 114px;color: white;font-size: 39px; line-height: 1;"
+            id="OP5_game">難易度選択画面にすすむ</div>
+        <!--一つ前に戻るボタン-->
+        <div style="position: absolute;height: 38px;width: 283px;top: 1030px;left: 111px;color: white;font-size: 39px; line-height: 1;"
+            id="OP5_back">一つ前にもどる</div>
+    </div>
+
+
+    <!--難易度選択画面　製作中　動き付けたら仮完成-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-image: url(stand-by-BackGround.png); display:none;"
+        id="difficulty">
+        <!--Easy-->
+        <div style="position: absolute;height: 93px;width: 300px;top: 257px;left: 839px; background-color: #99a6c990; color: white;font-size: 84px; text-align: center; padding: 0% 0% 1%"
+            id="difficulty_Easy"> Easy</div>
+        <!--Normal-->
+        <div style="position: absolute;height: 93px;width: 300px;top: 472px;left: 839px; background-color: #99a6c990; color: white;font-size: 84px;text-align: center;padding: 0% 0% 1%"
+            id="difficulty_Normal">Normal </div>
+        <!--Hard-->
+        <div style="position: absolute;height: 93px;width: 300px;top: 686px;left: 839px; background-color: #99a6c990; color: white;font-size: 84px;text-align: center;padding: 0% 0% 1%"
+            id="difficulty_Hard">Hard </div>
+        <!--魔女-->
+        <img style="position: absolute;height: 400px;width: 300px;top: 550px;right: 200px;" src="stand-by.png">
+    </div>
+
+
+
+
+    <!--単語選択画面Easy　製作中　動き付けたら仮完成-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: gray; display:none;"
+        id="wordchoice_Easy">
+        <!--単語を選ぼう-->
+        <div style="position: absolute;height: 78px;width: 832px;top: 70px;left: 616px; font-size: 60px;">
+            君が使いたい魔法を選ぼう！</div>
+
+
+
+
+        <!--枠線-->
+        <div
+            style="position: absolute;height: 772px;width: 1542px;top: 167px;left: 189px; border-style: solid; border-width:4px;border-color: white;">
+
+
+
+
+            <!--ほのお-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 35px;left: 157px;font-size: 30px; line-height: 1;">
+                ほのお</div>
+            <!--炎-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 67px;left: 157px;background-color: palevioletred;  font-size: 70px; line-height: 1;"
+                name="words_word" data-word="fire">fire</div>
+            <!--炎（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 52px;left: 622px;" src="Fire.png">
+
+
+            <!--みず-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 172px;left: 157px;font-size: 30px; line-height: 1;">
+                みず</div>
+            <!--水-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 209px;left: 157px; background-color: paleturquoise; font-size: 70px; line-height: 1;"
+                name="words_word" data-word="water">water</div>
+            <!--水（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 190px;left: 622px;" src="Water.png">
+
+
+            <!--くさ-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 312px;left: 157px;font-size: 30px; line-height: 1;">
+                くさ</div>
+            <!--草-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 347px;left: 157px; background-color: palegreen; font-size: 70px; line-height: 1;"
+                name="words_word" data-word="grass">grass</div>
+            <!--草（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 328px;left: 622px;" src="Grass.png">
+
+
+            <!--かみなり-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 450px;left: 157px;font-size: 30px; line-height: 1;">
+                かみなり</div>
+            <!--雷-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 485px;left: 157px;background-color: palegoldenrod;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="thunder">thunder</div>
+            <!--雷（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 466px;left: 622px;" src="Thunder.png">
+
+
+            <!--こおり-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 588px;left: 157px;font-size: 30px; line-height: 1;">
+                こおり</div>
+            <!--氷-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 623px;left: 157px;background-color: lightcyan;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="ice">ice</div>
+            <!--氷（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 604px;left: 622px;" src="Ice.png">
+
+
+            <!--かぜ-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 35px;right: 277px;font-size: 30px; line-height: 1;">
+                かぜ</div>
+            <!--風-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 72px;right: 277px;background-color: honeydew;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="wind">wind</div>
+            <!--風（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 52px;right: 20px;" src="Wind.png">
+
+
+            <!--いわ-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 172px;right: 277px;font-size: 30px; line-height: 1;">
+                いわ</div>
+            <!--岩-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 209px;right: 277px;background-color: tan;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="rock">rock</div>
+            <!--岩（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 190px;right: 20px;" src="Rock.png">
+
+
+            <!--どく-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 312px;right: 277px;font-size: 30px; line-height: 1;">
+                どく</div>
+            <!--毒-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 347px;right: 277px;background-color: #4b008270;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="poison">poison</div>
+            <!--毒（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 328px;right: 20px;" src="Poison.png">
+
+
+            <!--ひかり-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 450px;right: 277px;font-size: 30px; line-height: 1;">
+                ひかり</div>
+            <!--光-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 485px;right: 277px;background-color: ivory;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="light">light</div>
+            <!--光（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 466px;right: 20px;" src="Light.png">
+
+
+            <!--やみ-->
+            <div
+                style="position: absolute;height: 30px;width: 325px;top: 588px;right: 277px;font-size: 30px; line-height: 1;">
+                やみ</div>
+            <!--闇-->
+            <div style="position: absolute;height: 70px;width: 325px;top: 623px;right: 277px;background-color: #00008070;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="darkness">darkness</div>
+            <!--闇（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 604px;right: 20px;" src="Darkness.png">
+        </div>
+    </div>
+
+
+
+
+    <!--単語選択画面Normal　製作中　動き付けたら仮完成-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: gray; display:none;"
+        id="wordchoice_Normal">
+        <!--単語を選ぼう-->
+        <div style="position: absolute;height: 78px;width: 832px;top: 70px;left: 616px; font-size: 60px;">
+            君が使いたい魔法を選ぼう！</div>
+
+
+
+
+        <!--枠線-->
+        <div
+            style="position: absolute;height: 772px;width: 1542px;top: 167px;left: 189px; border-style: solid; border-width:4px;border-color: white;">
+
+
+
+
+            <!--炎-->
+            <div style="position: absolute;height: 70px;width: 574px;top: 67px;left: 11px;background-color: palevioletred;font-size: 70px; color: black; line-height: 1;"
+                name="words_word" data-word="fire">Flame Blast</div>
+            <!--炎（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 49px;left: 622px;" src="Fire.png">
+
+
+
+
+            <!--水-->
+            <div style="position: absolute;height: 70px;width: 574px;top: 206px;left: 11px;background-color: paleturquoise;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="water">Aqua Splash</div>
+            <!--水（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 188px;left: 622px;" src="Water.png">
+
+
+
+
+            <!--草-->
+            <div style="position: absolute;height: 70px;width: 574px;top: 345px;left: 11px;background-color: palegreen;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="grass">Leaf Cutter</div>
+            <!--草（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 326px;left: 622px;" src="Grass.png">
+
+
+
+
+            <!--雷-->
+            <div style="position: absolute;height: 70px;width: 574px;top: 484px;left: 11px;background-color: palegoldenrod;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="thunder">Thunder Bolt</div>
+            <!--雷（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 465px;left: 622px;" src="Thunder.png">
+
+
+
+
+            <!--氷-->
+            <div style="position: absolute;height: 72px;width: 575px;top: 622px;left: 11px;background-color: lightcyan;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="ice">Icicle Crash</div>
+            <!--氷（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 604px;left: 622px;" src="Ice.png">
+
+
+
+
+            <!--風-->
+            <div style="position: absolute;height: 70px;width: 574px;top: 67px;right: 190px;background-color: honeydew;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="wind">Gust Slash</div>
+            <!--風（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 49px;right: 19px;" src="Wind.png">
+
+
+
+
+            <!--岩-->
+            <div style="position: absolute;height: 70px;width: 574px;top: 206px;right: 190px;background-color: tan;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="rock">Boulder Smash</div>
+            <!--岩（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 188px;right: 19px;" src="Rock.png">
+
+
+
+
+            <!--毒-->
+            <div style="position: absolute;height: 70px;width: 574px;top: 345px;right: 190px;background-color: #4b008270;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="poison">Venomous Sting</div>
+            <!--毒（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 326px;right: 19px;" src="Poison.png">
+
+
+
+
+            <!--光-->
+            <div style="position: absolute;height: 70px;width: 574px;top: 484px;right: 190px;background-color: ivory;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="light">Radiant Beam</div>
+            <!--光（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 465px;right: 19px;" src="Light.png">
+
+
+
+
+            <!--闇-->
+            <div style="position: absolute;height: 70px;width: 575px;top: 622px;right: 190px;background-color: #00008070;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="darkness">Shadow Claw</div>
+            <!--闇（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 604px;right: 19px;" src="Darkness.png">
+
+
+
+
+        </div>
+    </div>
+
+
+    <!--単語選択画面Hard1　製作中　動き付けたら仮完成-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: gray; display:none;"
+        id="wordchoice_Hard1">
+        <!--単語を選ぼう-->
+        <div style="position: absolute;height: 78px;width: 832px;top: 70px;left: 616px; font-size: 60px;">
+            君が使いたい魔法を選ぼう！</div>
+
+
+
+
+        <!--枠線-->
+        <div
+            style="position: absolute;height: 772px;width: 1542px;top: 167px;left: 189px; border-style: solid; border-width:4px;border-color: white;">
+
+
+
+
+            <!--炎-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 77px;left: 30px;background-color: palevioletred;font-size: 52px;line-height: 1;"
+                name="words_word" data-word="fire">Scorching power, burn the entire enemy to ashes!</div>
+            <!--炎（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 49px;right: 45px;" src="Fire.png">
+
+
+
+
+            <!--水-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 206px;left: 30px;background-color: paleturquoise;font-size: 52px;line-height: 1;"
+                name="words_word" data-word="water">A clean flow, quench all in its path!</div>
+            <!--水（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 188px;right: 45px;" src="Water.png">
+
+
+
+
+            <!--草-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 345px;left: 30px;background-color: palegreen;font-size: 52px;line-height: 1;"
+                name="words_word" data-word="grass">With the breath of the earth, let new buds sprout!</div>
+            <!--草（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 326px;right: 45px;" src="Grass.png">
+
+
+
+
+            <!--雷-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 484px;left: 30px;background-color: palegoldenrod;font-size: 45px;line-height: 1;"
+                name="words_word" data-word="thunder">With the power of electric light, strike through an enemy!
+            </div>
+            <!--雷（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 465px;right: 45px;" src="Thunder.png">
+
+
+
+
+            <!--氷-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 622px;left: 30px;background-color: lightcyan;font-size: 52px;line-height: 1;"
+                name="words_word" data-word="ice">With the power of ice, let all freeze!</div>
+            <!--氷（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 604px;right: 45px;" src="Ice.png">
+        </div>
+
+
+        <!--二ページ目に進む-->
+        <div style="position: absolute;height: 65px;width: 582px;top: 957px;right: 65px;color: white; font-size: 65px;line-height: 1;"
+            id="wordchoice_Hard1_front">2ページ目にすすむ</div>
+    </div>
+
+
+    <!--単語選択画面Hard2　製作中　動き付けたら仮完成-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: gray; display:none;"
+        id="wordchoice_Hard2">
+        <!--単語を選ぼう-->
+        <div style="position: absolute;height: 78px;width: 832px;top: 70px;left: 616px; font-size: 60px;">
+            君が使いたい魔法を選ぼう！</div>
+
+
+        <!--枠線-->
+        <div
+            style="position: absolute;height: 772px;width: 1542px;top: 167px;left: 189px; border-style: solid; border-width:4px;border-color: white;">
+
+
+            <!--風-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 67px;right: 190px;background-color: honeydew;font-size: 70px;line-height: 1;"
+                name="words_word" data-word="wind">Free wind, blow everything away!</div>
+            <!--風（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 49px;right: 19px;" src="Wind.png">
+
+
+            <!--岩-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 206px;right: 190px;background-color: tan;font-size: 42px;line-height: 1;"
+                name="words_word" data-word="rock">With the strength of a rock, smash through any obstacle!</div>
+            <!--岩（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 188px;right: 19px;" src="Rock.png">
+
+
+            <!--毒-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 345px;right: 190px;background-color: #4b008270;font-size: 42px;line-height: 1;"
+                name="words_word" data-word="poison">For poisonous power, unleash corruption and confusion!</div>
+            <!--毒（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 326px;right: 19px;" src="Poison.png">
+
+
+            <!--光-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 484px;right: 190px;background-color: ivory;font-size: 42px;line-height: 1;"
+                name="words_word" data-word="light">You strike with sacred light, brushing away the darkness!</div>
+            <!--光（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 465px;right: 19px;" src="Light.png">
+
+
+            <!--闇-->
+            <div style="position: absolute;height: 70px;width: 1306px;top: 622px;right: 190px;background-color: #00008070;font-size: 42px;line-height: 1;"
+                name="words_word" data-word="darkness">With the power of jet black, instill fear and panic!</div>
+            <!--闇（画像）-->
+            <img style="position: absolute;height: 116px;width: 116px;top: 604px;right: 19px;" src="Darkness.png">
+        </div>
+
+
+
+
+        <!--一つ前に戻るボタン-->
+        <div style="position: absolute;height: 65px;width: 593px;top: 965px;right: 65px;color: white;font-size: 65px; line-height: 1;"
+            id="wordchoice_Hard2_back">１ページ目にもどる</div>
+
+
+    </div>
+
+
+
+
+    <!--最終確認画面-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: black; display:none;"
+        id="final_confirmation">
+
+
+
+
+        <!--最終確認問いかけ-->
+        <div
+            style="position: absolute;height: 65px;width: 671px;top: 219px;left: 619px; font-size: 60px; color: white;">
+            この魔法で良いかな？</div>
+        <!--最終確認単語-->
+        <div style="position: absolute;height: 224px;width: 1723px;top: 416px;left: 63px;font-size: 90px;color: white;text-align:center;"
+            id="final_confirmation_word"></div>
+
+
+
+
+        <!--進む-->
+        <div style="position: absolute;height: 65px;width: 518px;bottom: 56px;right: 38px;color: white;font-size: 65px;line-height: 1;"
+            id="final_confirmation_front">この魔法でいい</div>
+        <!--戻る-->
+        <div style="position: absolute;height: 65px;width: 748px;bottom: 56px;left: 10px;color: white;font-size: 65px;line-height: 1;"
+            id="final_confirmation_back">難易度選択画面にもどる</div>
+    </div>
+
+
+
+
+    <!--発音例-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: black; display:none;"
+        id="speak_example">
+
+        <!--君が発音する単語は…-->
+        <div
+            style="position: absolute;height: 75px;width: 791px;top: 117px;left: 563px; color: white; font-size: 75px;line-height: 1;">
+            君が発音する単語は…</div>
+        <!--英語-->
+        <div style="position: absolute;height: 224px;width: 1745px;top: 422px;left: 77px; color: white;font-size: 85px;line-height: 1;text-align:center;"
+            id="speak_example_word"></div>
+
+        <!--音声-->
+        <audio controls src="Easy_fire.mp3" id="Easy_fire_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_water.mp3" id="Easy_water_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_grass.mp3" id="Easy_grass_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_thunder.mp3" id="Easy_thunder_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_ice.mp3" id="Easy_ice_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_wind.mp3" id="Easy_wind_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_rock.mp3" id="Easy_rock_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_poison.mp3" id="Easy_poison_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_light.mp3" id="Easy_light_mp3" style="display: none;"></audio>
+        <audio controls src="Easy_darkness.mp3" id="Easy_darkness_mp3" style="display: none;"></audio>
+
+
+        <audio controls src="Normal_fire.mp3" id="Normal_fire_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_water.mp3" id="Normal_water_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_grass.mp3" id="Normal_grass_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_thunder.mp3" id="Normal_thunder_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_ice.mp3" id="Normal_ice_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_wind.mp3" id="Normal_wind_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_rock.mp3" id="Normal_rock_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_poison.mp3" id="Normal_poison_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_light.mp3" id="Normal_light_mp3" style="display: none;"></audio>
+        <audio controls src="Normal_darkness.mp3" id="Normal_darkness_mp3" style="display: none;"></audio>
+
+
+
+        <audio controls src="Hard_fire.mp3" id="Hard_fire_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_water.mp3" id="Hard_water_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_grass.mp3" id="Hard_grass_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_thunder.mp3" id="Hard_thunder_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_ice.mp3" id="Hard_ice_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_wind.mp3" id="Hard_wind_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_rock.mp3" id="Hard_rock_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_poison.mp3" id="Hard_poison_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_light.mp3" id="Hard_light_mp3" style="display: none;"></audio>
+        <audio controls src="Hard_darkness.mp3" id="Hard_darkness_mp3" style="display: none;"></audio>
+
+
+
+
+
+        <!--もう一度聞く-->
+        <div style="position: absolute;height: 65px;width: 400px;top: 767px;left: 757px; font-size: 65px;color: white; font-size: 50px;line-height: 1;text-align:center;"
+            id="speak_example_repeat">もう１回聞く</div>
+        <!--もどる-->
+        <div style="position: absolute;height: 65px;width: 409px;top: 939px;left: 754px; font-size: 65px;color: white; font-size: 50px;line-height: 1;text-align:center;"
+            id="speak_example_front">ゲームを始める</div>
+    </div>
+
+
+
+
+    <!--ゲーム画面-->
+    <div style="position: relative;height: 1080px;width: 1920px; display:none; background-image: url(battle-BackGround.png);"
+        id="mainstage">
+        <!--ターンの所-->
+        <div style="position: absolute;height: 50px;width: 400px;top:45px;right: 200px;border-style: solid;border-width: 4px; font-size: 50px;line-height: 1;text-align: center;"
+            id="mainstage_turn"></div>
+        <!--HPの残量の所（文字）-->
+        <div style="position: absolute;height: 35px;width: 214px;top: 171px;left: 108px; font-size: 35px; line-height: 1;text-align: left;display: block;"
+            id="HP_tensuu"></div>
+        <!--HPバーの所-->
+        <div
+            style="position: absolute;height: 52px;width: 370px;top: 209px;left: 108px; border-style: solid; border-width:4px;border-radius: 11px;">
+            <div style="height: 52px;width: text2;top: 370px;left: 39px;background-color: mediumspringgreen; transition: 5s width;"
+                id="mainstage_HPber"></div>
+        </div>
+        <!--正確に発音してみようの所-->
+        <div style="position: absolute;height: 84px;width: 874px;top: 209px;left: 512px;font-size: 84px;line-height: 1;"
+            id="mainstage_Lets_speak">正確に発音してみよう</div>
+        <!--発音する単語の所-->
+        <div style="position: absolute;height: 84px;width: 1723px;top: 308px;left: 63px;font-size: 60px;line-height: 1;text-align:center;"
+            id="mainstage_word"></div>
+        <!--あなたの点数は○○点！の所-->
+        <div style="position: absolute;height: 54px;width: 596px;top: 1000px;left: 328px; font-size: 54px;line-height: 1;display: block;"
+            id="mainstage_score"></div>
+        <!--敵に○○のダメージの所-->
+        <div style="position: absolute;height: 54px;width: 617px;top: 1000px;left: 973px; font-size: 54px;line-height: 1;display: block;"
+            id="mainstage_damage"></div>
+        <!--点数とダメージを囲む線-->
+        <div style="position: absolute;height: 86px;width: 1704px;top: 978px;left: 124px;border-style: solid;border-width: 4px;"
+            id="mainstage_turn"></div>
+        <!--モンスターの絵の所 元気ver-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 376px;left: 90px;display: block;"
+            src="monster_power.png" id="mainstage_monster_cheerful">
+        <!--モンスターの絵の所　元気なしver-->
+        <img style="position: absolute;height: 432px;width: 542px;top: 430px;left: 85px;display: none;"
+            src="dragon_lose.PNG" id="mainstage_monster_down">
+        <!--モンスターの絵の所 ドラゴン勝ったver-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 376px;left: 90px;display: none;"
+            src="dragon_victory.PNG" id="mainstage_monster_victory">
+        <!--モンスターエフェクトの所-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 376px;left: 90px;display: none;"
+            id="mainstage_effect_monster">
+        <!--モンスターの言葉-->
+        <img style="position: absolute;height: 87px;width: 270px;top: 4800px;left: 630px;display: none;"
+            src="dragon_victory_effect.png" id="mainstage_monster_words">
+        <!--プレイヤーの部分 元気ver-->
+        <img style="position: absolute;height: 460px;width: 340px;top: 466px;left: 1475px; display: block;"
+            src="playear_power.png" id="mainstage_player_cheerful">
+        <!--プレイヤーの言葉-->
+        <div style="position: absolute;height: 120px;width: 500px;top: 550px;left: 950px;border-style: solid;border-width: 1px;border-radius: 4px;font-size: 35px;line-height: 1;text-align: center;vertical-align: middle; border-width: 3px; display: none;"
+            id="mainstage_player_words" class="vertical-align: middle;"></div>
+        <!--ターン目に進む-->
+        <div style="position: absolute;height: 86px;width: 1704px;top: 1005px;left: 124px; font-size: 54px;line-height: 1; text-align: center;display: none;"
+            id="mainstage_turn_next"></div>
+        <!--モンスターに勝った言葉-->
+        <div style="position: absolute;height: 86px;width: 1704px;top: 1005px;left: 124px; font-size: 54px;line-height: 1; text-align: center;display: none;"
+            id="mainstage_monster_win_words">ドラゴンを倒した！</div>
+        <!--モンスターに負けた言葉-->
+        <div style="position: absolute;height: 86px;width: 1704px;top: 1005px;left: 124px; font-size: 54px;line-height: 1; text-align: center;display: none;"
+            id="mainstage_monster_lose_words">プレイヤーは負けた</div>
+
+        <!--カウントダウンメーターの所-->
+        <div style="position: absolute;height: 52px;width: 370px;top: 540px;left:750px; border-style: solid; border-width:4px;border-radius: 11px;display: none;"
+            id="count_line">
+            <div style="height: 52px;top: 540px; background-color:  mediumturquoise; transition: width 5s linear;"
+                id="count_meter"></div>
+        </div>
+        <!--発音残り時間（文字）-->
+        <div style="position: absolute;height: 30px;width: 800px;top: 470px;left: 600px; color: black; font-size: 74px;line-height: 1;text-align:center;display: none;"
+            id="count_supell">発音終了まであと…</div>
+
+        <!--エフェクト敵（位置を変える）-->
+        <!--炎-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Fire_attack.png" id="mainstage_effect_monster_fire">
+
+
+        <!--水-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Water_attack.png" id="mainstage_effect_monster_water">
+
+
+        <!--草-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Grass_attack.png" id="mainstage_effect_monster_grass">
+
+
+        <!--雷-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Thunder_attack.png" id="mainstage_effect_monster_thunder">
+
+
+        <!--氷-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Ice_attack.png" id="mainstage_effect_monster_ice">
+
+
+        <!--風-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Wind_attack.png" id="mainstage_effect_monster_wind">
+
+
+        <!--岩-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Rock_attack.png" id="mainstage_effect_monster_rock">
+
+
+        <!--毒-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Poison_attack.png" id="mainstage_effect_monster_poison">
+
+
+        <!--光-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Light_attack.png" id="mainstage_effect_monster_light">
+
+
+        <!--闇-->
+        <img style="position: absolute;height: 505px;width: 540px;top: 385px;left: 109px;display: none;"
+            src="Darkness_attack.png" id="mainstage_effect_monster_darkness">
+    </div>
+
+
+    <!--勝利画面-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-image: url(win-BackGround.png); display:none;"
+        id="win_display">
+
+
+
+
+        <!--You win-->
+        <div
+            style="position: absolute;height: 163px;width: 779px;top: 122px;left: 530px; color: black; font-size: 163px;line-height: 1;text-align: center;">
+            You win</div>
+        <!--おめでとう-->
+        <div
+            style="position: absolute;height: 113px;width: 800px;top: 484px;left: 558px; color: black;font-size: 113px;line-height: 1;text-align:center;">
+            おめでとう！！</div>
+        <!--喜んでる人の所-->
+        <img style="position: absolute;height: 505px;width: 405px;top: 497px;left: 1329px;" src="victory.png">
+        <!--EDにすすむ-->
+        <div style="position: absolute;height: 60px;width: 1427px;top: 990px;left: 261px; color: black;font-size: 60px;line-height: 1;text-align:center;"
+            id="win_display_front">
+            エンディングにすすむ</div>
+    </div>
+
+
+
+
+    <!--敗北画面-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-image: url(lose-BackGround.png); display:none;"
+        id="lose_display">
+
+
+
+
+        <!--You lose-->
+        <div
+            style="position: absolute;height: 163px;width: 779px;top: 122px;left: 530px; color: black; font-size: 163px;line-height: 1;text-align: center;">
+            You lose</div>
+        <!--ドンマイ-->
+        <div
+            style="position: absolute;height: 113px;width: 800px;top: 484px;left: 558px; color: black;font-size: 113px;line-height: 1;text-align:center;">
+            惜しかったね…あと少し！</div>
+        <!--絶望してる人の所-->
+        <img style="position: absolute;height: 505px;width: 405px;top: 497px;left: 1329px;" src="lose.png">
+        <!--EDにすすむ-->
+        <div style="position: absolute;height: 60px;width: 1427px;top: 990px;left: 261px; color: black;font-size: 60px;line-height: 1;text-align:center;"
+            id="lose_display_front">
+            エンディングにすすむ</div>
+    </div>
+
+
+
+
+    <!--勝利ED　（最終画面）-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: seagreen; display:none;"
+        id="win_display_ED">
+        <!--文章-->
+        <div
+            style="position: absolute;height: 456px;width: 1670px;top: 251px;left: 243px;color: white; font-size: 100px; line-height: 1;">
+            あなたのおかげで、<br>無事に文化祭が開催されるようだ！<br>これから文化祭楽しんでね！</div>
+        <!--ゲーム画面に進むボタン-->
+        <div style="position: absolute;height: 38px;width: 450px;top: 928px;right: 114px;color: white;font-size: 39px; line-height: 1;"
+            id="win_display_ED_front">制作者一覧にすすむ</div>
+    </div>
+
+
+
+
+    <!--敗北ED　（最終画面）-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: seagreen; display:none;"
+        id="lose_display_ED">
+        <!--文章-->
+        <div
+            style="position: absolute;height: 456px;width: 1670px;top: 251px;left: 243px;color: white; font-size: 80px; line-height: 1;">
+            負けてしまったのか…<br>しかし大丈夫！<br>どうやらこの世界は幻だったようだ。<br>これから、本当の文化祭を楽しんでね！<br>そして、また挑戦してね～</div>
+        <!--ゲーム画面に進むボタン-->
+        <div style="position: absolute;height: 38px;width: 450px;top: 928px;right: 114px;color: white;font-size: 39px; line-height: 1;"
+            id="lose_display_ED_front">制作者一覧にすすむ</div>
+    </div>
+
+
+
+
+    <!--ED-->
+    <div style="position: relative;height: 1080px;width: 1920px;background-color: gray; display:none;" id="ED">
+
+
+
+
+        <!--Thank you for playing-->
+        <div
+            style="position: absolute;height: 100px;width: 1320px;top: 70px;left: 290px; color: white; font-size: 100px;line-height: 1;text-align: center;">
+            Thank you for playing!</div>
+        <!--制作者一覧-->
+        <div
+            style="position: absolute;height: 70px;width: 600px;top: 190px;left: 658px; color: white;font-size: 70px;line-height: 1;text-align:center;">
+            制作者一覧</div>
+        <!--名前書くところ-->
+        <img style="position: absolute;height: 675px;width: 1200px;top: 280px;left: 340px;" src="製作者一覧 (7).png">
+        <!--EDにすすむ-->
+        <div style="position: absolute;height: 60px;width: 1427px;top: 990px;left: 261px; color: white;font-size: 60px;line-height: 1;text-align:center;"
+            id="ED_front">
+            タイトル画面に戻る</div>
+    </div>
+
+
+
+
+    <script> //JSが書ける
+
+
+        //ID登録一覧
+
+
+        //スタート画面のボタン
+        const start_botton = document.getElementById("start_botton");
+        //スタート画面
+        const startscreen = document.getElementById("startscreen");
+
+
+        //あらすじ画面1
+        const OP1 = document.getElementById("OP1");
+        //あらすじ画面1 あらすじスキップボタン
+        const OP1_skip = document.getElementById("OP1_skip");
+        //あらすじ画面１ タイトルに戻る
+        const OP1_back = document.getElementById("OP1_back");
+        //あらすじ画面１　一つ先に進む
+        const OP1_front = document.getElementById("OP1_front");
+
+
+        //あらすじ画面2
+        const OP2 = document.getElementById("OP2");
+        //あらすじ画面2 あらすじスキップボタン
+        const OP2_skip = document.getElementById("OP2_skip");
+        //あらすじ画面2 一つ前に戻る
+        const OP2_back = document.getElementById("OP2_back");
+        //あらすじ画面2　一つ先に進む
+        const OP2_front = document.getElementById("OP2_front");
+
+
+        //あらすじ画面3
+        const OP3 = document.getElementById("OP3");
+        //あらすじ画面3 あらすじスキップボタン
+        const OP3_skip = document.getElementById("OP3_skip");
+        //あらすじ画面3 一つ前に戻る
+        const OP3_back = document.getElementById("OP3_back");
+        //あらすじ画面3　一つ先に進む
+        const OP3_front = document.getElementById("OP3_front");
+
+
+        //あらすじ画面4
+        const OP4 = document.getElementById("OP4");
+        //あらすじ画面4 あらすじスキップボタン
+        const OP4_skip = document.getElementById("OP4_skip");
+        //あらすじ画面4 一つ前に戻る
+        const OP4_back = document.getElementById("OP4_back");
+        //あらすじ画面4　一つ先に進む
+        const OP4_front = document.getElementById("OP4_front");
+
+
+        //あらすじ画面5
+        const OP5 = document.getElementById("OP5")
+        //あらすじ画面5　一つ戻る
+        const OP5_back = document.getElementById("OP5_back");
+        //あらすじ画面5　ゲーム画面にいくボタン
+        const OP5_game = document.getElementById("OP5_game")
+
+
+        //難易度選択画面
+        const difficulty = document.getElementById("difficulty");
+        //難易度Easyボタン
+        const difficulty_Easy = document.getElementById("difficulty_Easy");
+        //難易度Normalボタン
+        const difficulty_Normal = document.getElementById("difficulty_Normal");
+        //難易度Hardボタン
+        const difficulty_Hard = document.getElementById("difficulty_Hard");
+
+
+
+
+        //単語選択画面 Easy
+        const wordchoice_Easy = document.getElementById("wordchoice_Easy");
+
+
+
+
+        //単語選択画面 Normal
+        const wordchoice_Normal = document.getElementById("wordchoice_Normal");
+
+
+
+
+        //単語選択画面 Hard1
+        const wordchoice_Hard1 = document.getElementById("wordchoice_Hard1");
+        //単語選択 Hard１のボタン
+        const wordchoice_Hard1_front = document.getElementById("wordchoice_Hard1_front");
+
+
+
+
+        //単語選択Hard2
+        const wordchoice_Hard2 = document.getElementById("wordchoice_Hard2");
+        //単語選択Hard2 前に進む
+        const wordchoice_Hard2_front = document.getElementById("wordchoice_Hard2_front");
+        //単語選択Hard2 前に進む
+        const wordchoice_Hard2_back = document.getElementById("wordchoice_Hard2_back");
+
+
+        //単語仮置き場
+        //炎
+        const mainstage_effect_monster_fire = document.getElementById("mainstage_effect_monster_fire");
+        //水
+        const mainstage_effect_monster_water = document.getElementById("mainstage_effect_monster_water");
+        //草
+        const mainstage_effect_monster_grass = document.getElementById("mainstage_effect_monster_grass");
+        //雷
+        const mainstage_effect_monster_thunder = document.getElementById("mainstage_effect_monster_thunder");
+        //氷
+        const mainstage_effect_monster_ice = document.getElementById("mainstage_effect_monster_ice");
+        //風
+        const mainstage_effect_monster_wind = document.getElementById("mainstage_effect_monster_wind");
+        //岩
+        const mainstage_effect_monster_rock = document.getElementById("mainstage_effect_monster_rock");
+        //毒
+        const mainstage_effect_monster_poison = document.getElementById("mainstage_effect_monster_poison");
+        //光
+        const mainstage_effect_monster_light = document.getElementById("mainstage_effect_monster_light");
+        //闇
+        const mainstage_effect_monster_darkness = document.getElementById("mainstage_effect_monster_darkness");
+
+
+        //最終確認画面
+        const final_confirmation = document.getElementById("final_confirmation");
+        //最終確認画面　一つ戻る
+        const final_confirmation_back = document.getElementById("final_confirmation_back");
+        //最終確認画面　一つ先に進む
+        const final_confirmation_front = document.getElementById("final_confirmation_front");
+        //最終確認単語
+        const final_confirmation_word = document.getElementById("final_confirmation_word");
+
+
+
+
+        //発音例
+        const speak_example = document.getElementById("speak_example");
+        //発音例　英語
+        const speak_example_word = document.getElementById("speak_example_word");
+        //発音例　もう一度聞く
+        const speak_example_repeat = document.getElementById("speak_example_repeat");
+        //発音例　ゲーム画面に行く
+        const speak_example_front = document.getElementById("speak_example_front");
+
+
+
+        //ゲーム画面
+        const mainstage = document.getElementById("mainstage");
+        //ターンのところ
+        const mainstage_turn = document.getElementById("mainstage_turn");
+        //ダメージのところ
+        const mainstage_damage = document.getElementById("mainstage_damage");
+        //HPバー（塗りつぶし）のところ
+        const mainstage_HPber = document.getElementById("mainstage_HPber");
+        //点数のところ
+        const mainstage_score = document.getElementById("mainstage_score");
+        //正確に発音してみようのところ
+        const mainstage_Lets_speak = document.getElementById("mainstage_Lets_speak")
+        //モンスターのところ元気（画像）
+        const mainstage_monster_cheerful = document.getElementById("mainstage_monster_cheerful");
+        //モンスターのところ勝った
+        const mainstage_monster_victory = document.getElementById("mainstage_monster_victory");
+        //モンスターのところダウン（画像）
+        const mainstage_monster_down = document.getElementById("mainstage_monster_down");
+        //エフェクト(敵)
+        const mainstage_effect_monster = document.getElementById("mainstage_effect_monster");
+        //モンスターのところ（画像）
+        const mainstage_monster_words = document.getElementById("mainstage_monster_words");
+        //発音の単語のところ
+        const mainstage_word = document.getElementById("mainstage_word");
+        //マイクの画像のところ
+        const mainstage_microphone = document.getElementById("mainstage_microphone");
+        //プレイヤーのところ
+        const mainstage_player_cheerful = document.getElementById("mainstage_player_cheerful");
+        //プレイヤーのところ（言葉）
+        const mainstage_player_words = document.getElementById("mainstage_player_words");
+        //次のターンに進む
+        const mainstage_turn_next = document.getElementById("mainstage_turn_next");
+        //モンスターに勝った
+        const mainstage_monster_win_words = document.getElementById("mainstage_monster_win_words");
+        //モンスターに勝った
+        const mainstage_monster_lose_words = document.getElementById("mainstage_monster_lose_words");
+
+
+        //カウント（動く）
+        const count_meter = document.getElementById("count_meter");
+        //カウント（動く）
+        const count_supell = document.getElementById("count_supell");
+        //カウントダウン線
+        const count_line = document.getElementById("count_line");
+
+
+
+
+        //勝利ED
+        const win_display_ED = document.getElementById("win_display_ED");
+        //勝利ED 制作者一覧に進む
+        const win_display_ED_front = document.getElementById("win_display_ED_front");
+        //勝利ED
+        const lose_display_ED = document.getElementById("lose_display_ED");
+        //敗北ED 制作者一覧に進む
+        const lose_display_ED_front = document.getElementById("lose_display_ED_front");
+
+
+
+
+
+
+        //ED
+        const ED = document.getElementById("ED");
+
+
+        //勝利画面
+        const win_display = document.getElementById("win_display");
+        //EDにすすむ
+        const win_display_front = document.getElementById("win_display_front");
+
+
+
+
+        //敗北画面
+        const lose_display = document.getElementById("lose_display");
+        //EDにすすむ
+        const lose_display_front = document.getElementById("lose_display_front");
+
+
+
+
+        //タイトル画面に進む
+        const ED_front = document.getElementById("ED_front");
+
+
+
+
+        //name登録一覧
+
+
+
+
+        //単語
+        const words_word = document.getElementsByName("words_word");
+
+
+        //あらすじ
+        const OP = document.getElementsByName("OP");
+        //あらすじスキップ
+        const OP_skip = document.getElementsByName("OP_skip");
+
+
+        //HPの点数
+        const HP_tensuu = document.getElementsByName("HP_tensuu");
+
+        async function azure_word(word, mills) {
+            //return azure_dummy(word);
+            try {
+                return await sendVoice(word, mills);
+            } catch (error) {
+                return Promise.resolve((0))
+            }
+
+        };
+
+        async function azure_dummy(word) {
+            return await new Promise((resolove) => {
+                setTimeout(() => {
+                    resolove(Math.floor(Math.random() * 100));
+                }, 5000);
+            });
+        }
+
+        //ボタンが押されたら表示非表示　（スタート画面からあらすじ画面1 すすむ）
+        start_botton.addEventListener("click", e => {
+            startscreen.style.display = "none"
+            OP1.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面1からスタート画面　もどる）
+        OP1_back.addEventListener("click", e => {
+            OP1.style.display = "none"
+            startscreen.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面1からあらすじ画面2　すすむ）
+        OP1_front.addEventListener("click", e => {
+            OP1.style.display = "none"
+            OP2.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面２からあらすじ画面１　もどる）
+        OP2_back.addEventListener("click", e => {
+            OP2.style.display = "none"
+            OP1.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面2からあらすじ画面3　すすむ）
+        OP2_front.addEventListener("click", e => {
+            OP2.style.display = "none"
+            OP3.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面3からあらすじ画面2　もどる）
+        OP3_back.addEventListener("click", e => {
+            OP3.style.display = "none"
+            OP2.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面3からあらすじ画面4　すすむ）
+        OP3_front.addEventListener("click", e => {
+            OP3.style.display = "none"
+            OP4.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面4からあらすじ画面3）
+        OP4_back.addEventListener("click", e => {
+            OP4.style.display = "none"
+            OP3.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面4からあらすじ画面5）
+        OP4_front.addEventListener("click", e => {
+            OP4.style.display = "none"
+            OP5.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ画面5からあらすじ画面4）
+        OP5_back.addEventListener("click", e => {
+            OP5.style.display = "none"
+            OP4.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（あらすじ最終から難易度選択画面）
+        OP5_game.addEventListener("click", e => {
+            OP5.style.display = "none"
+            difficulty.style.display = "block"
+        }, false);
+
+
+        //ボタンが押されたら表示非表示　（難易度選択画面からEasyの単語選択画面）
+        difficulty_Easy.addEventListener("click", e => {
+            difficulty.style.display = "none"
+            wordchoice_Easy.style.display = "block"
+            difficult_select = "Easy_"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（難易度選択画面からNormalの単語選択画面）
+        difficulty_Normal.addEventListener("click", e => {
+            difficulty.style.display = "none"
+            wordchoice_Normal.style.display = "block"
+            difficult_select = "Normal_"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（難易度選択画面からHardの単語選択画面）
+        difficulty_Hard.addEventListener("click", e => {
+            difficulty.style.display = "none"
+            wordchoice_Hard1.style.display = "block"
+            difficult_select = "Hard_"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（Hard1 から Hard2）
+        wordchoice_Hard1_front.addEventListener("click", e => {
+            wordchoice_Hard1.style.display = "none"
+            wordchoice_Hard2.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（Hard2 から Hard1）
+        wordchoice_Hard2_back.addEventListener("click", e => {
+            wordchoice_Hard2.style.display = "none"
+            wordchoice_Hard1.style.display = "block"
+        }, false);
+
+
+
+
+        //スキップボタン（任意のあらすじから難易度選択画面）
+        for (const skip of OP_skip) {
+            skip.addEventListener("click", e => {
+                OP1.style.display = "none"
+                OP2.style.display = "none"
+                OP3.style.display = "none"
+                OP4.style.display = "none"
+                OP5.style.display = "none"
+                difficulty.style.display = "block"
+            }, false);
+        }
+
+
+        let selected_text;
+        let selected_effect;
+        let zanryou = 370;
+        let count_down = 370;
+        let difficult_select;
+        //単語を引っ張ってくる
+        for (const w of words_word) {
+            w.addEventListener("click", e => {
+                selected_text = w.textContent;
+                console.log(w.dataset.word);
+                wordchoice_Easy.style.display = "none"
+                wordchoice_Normal.style.display = "none"
+                wordchoice_Hard1.style.display = "none"
+                wordchoice_Hard2.style.display = "none"
+                final_confirmation.style.display = "block"
+                final_confirmation_word.textContent = selected_text;
+                speak_example_word.textContent = selected_text;
+                mainstage_word.textContent = selected_text;
+                mainstage_player_words.textContent = selected_text;
+                //エフェクト引っ張ってくるやつ
+                selected_effect = w.getAttribute("data-word");
+                console.log(selected_effect);
+
+            });
+        }
+        //ボタンが押されたら表示非表示（次のターンに進むから難易度選択画面）
+        mainstage_turn_next.addEventListener("click", e => {
+            mainstage.style.display = "none"
+            difficulty.style.display = "block"
+            document.getElementById("mainstage_effect_monster_" + selected_effect).style.display = "none";
+        })
+
+
+        //ボタンが押されたら表示非表示　（発音確認 から ゲーム確認画面 すすむ）
+        speak_example_front.addEventListener("click", async (e) => {
+            console.log("speak_example_front click");
+            speak_example.style.display = "none"
+            mainstage.style.display = "block"
+            mainstage_score.style.display = "none"
+            mainstage_damage.style.display = "none"
+            mainstage_turn_next.style.display = "none"
+            count_supell.style.display = "block"
+            count_line.style.display = "block"
+            count_meter.style.display = "block"
+            document.getElementById(difficult_select + selected_effect + "_mp3").pause()
+            document.getElementById(difficult_select + selected_effect + "_mp3").currentTime = 0
+
+            mainstage_player_words.style.display = "none"
+            mainstage_Lets_speak.style.display = "block"
+            mainstage_word.style.display = "block"
+            //Azure AI の録音時間だけのカウント
+            setTimeout(() => {
+                count_supell.style.display = "none"
+                count_line.style.display = "none"
+                mainstage_Lets_speak.style.display = "none"
+                mainstage_word.style.display = "none"
+                count_meter.style.display = "none"
+                mainstage_damage.style.display = "block"
+                mainstage_score.style.display = "block"
+            }, 7000);
+            setTimeout(() => {
+                document.getElementById("mainstage_effect_monster_" + selected_effect).style.display = "block";
+                mainstage_player_words.style.display = "block"
+            }, 8000);
+            document.getElementById("HP_tensuu").textContent = "HP " + zanryou + "/370";    //HP残量のところ
+            window.document.getElementById("mainstage_HPber").style.width = zanryou + "px";
+            window.document.getElementById("count_meter").style.width = "370px";
+            setTimeout(() => {
+                window.document.getElementById("count_meter").style.width = "0px";
+            }, 10);
+            const t = await azure_word(selected_text, 5000);
+
+            console.log(t);
+            const text = t;
+            document.getElementById("mainstage_score").textContent = "あなたの点数は" + text + "点";    //点数のところ
+            let text2 = text * 2
+            zanryou = zanryou - text2
+            document.getElementById("mainstage_damage").textContent = "敵に" + text2 + "のダメージ";   //ダメージのところ
+            if (zanryou < 0) zanryou = 0;
+            document.getElementById("HP_tensuu").textContent = "HP " + (zanryou) + "/370";    //HP残量のところ
+            window.document.getElementById("mainstage_HPber").style.width = zanryou + "px";
+
+            //ターン数に関係なくHPが0以下になったら勝利画面に行く
+            if (zanryou <= 0 && turn <= 4) {
+                setTimeout(() => {
+                    mainstage_score.style.display = "none"
+                    mainstage_damage.style.display = "none"
+                    mainstage_monster_win_words.style.display = "block"
+                    mainstage_monster_cheerful.style.display = "none"
+                    mainstage_turn_next.style.display = "none"
+                    mainstage_monster_down.style.display = "block"
+                }, 5000);
+            }
+
+            //ダメージが残ってるときとターンが3以上の時に負けたを表示
+            if (zanryou >= 1 && turn >= 3) {
+                setTimeout(() => {
+                    mainstage_score.style.display = "none"
+                    mainstage_damage.style.display = "none"
+                    mainstage_turn_next.style.display = "none"
+                    mainstage_monster_cheerful.style.display = "none"
+                    mainstage_monster_victory.style.display = "block"
+                    mainstage_monster_lose_words.style.display = "block"
+                    mainstage_monster_words.style.display = "block"
+                    mainstage_effect_monster_fire.style.display = "none"
+                    mainstage_effect_monster_darkness.style.display = "none"
+                    mainstage_effect_monster_grass.style.display = "none"
+                    mainstage_effect_monster_ice.style.display = "none"
+                    mainstage_effect_monster_light.style.display = "none"
+                    mainstage_effect_monster_poison.style.display = "none"
+                    mainstage_effect_monster_rock.style.display = "none"
+                    mainstage_effect_monster_thunder.style.display = "none"
+                    mainstage_effect_monster_water.style.display = "none"
+                    mainstage_effect_monster_wind.style.display = "none"
+                }, 5000);
+            }
+            await new Promise(resolve => setTimeout(resolve, 5000));
+            if (zanryou <= 0 && turn <= 4) {
+
+            } else if (zanryou >= 1 && turn >= 3) {
+
+            } else {
+                document.getElementById("mainstage_turn_next").textContent = (turn + 1) + "ターン目に進む"
+                mainstage_score.style.display = "none"
+                mainstage_damage.style.display = "none"
+                mainstage_turn_next.style.display = "block"
+            }
+
+
+        }, false);
+
+        //バトル画面　ターン数のところ
+        let turn = 1
+        document.getElementById("mainstage_turn").textContent = turn + "ターン" + "/3ターン";
+        document.getElementById("mainstage_turn_next").addEventListener("click", e => {
+            turn = turn + 1
+            document.getElementById("mainstage_turn").textContent = turn + "ターン" + "/3ターン";
+        })
+
+        //ボタンが押されたら表示非表示　（最終確認 から 発音例 すすむ）
+        document.getElementById("final_confirmation_front").addEventListener("click", e => {
+            final_confirmation.style.display = "none"
+            speak_example.style.display = "block"
+            document.getElementById(difficult_select + selected_effect + "_mp3").play()
+        }, false);
+
+        //選んだ単語の音声を流す
+        document.getElementById("speak_example_repeat").addEventListener("click", e => {
+            document.getElementById(difficult_select + selected_effect + "_mp3").play()
+        }, false);
+
+        //ボタンが押されたら表示非表示　（最終確認 から 難易度選択画面 もどる）
+        final_confirmation_back.addEventListener("click", e => {
+            final_confirmation.style.display = "none"
+            difficulty.style.display = "block"
+        }, false);
+
+
+        //ボタンが押されたら表示非表示　（ドラゴンを倒した から 勝利画面 すすむ）
+        mainstage_monster_win_words.addEventListener("click", e => {
+            mainstage.style.display = "none"
+            win_display.style.display = "block"
+            mainstage_score.style.display = "none"
+            mainstage_damage.style.display = "none"
+            mainstage_turn_next.style.display = "block"
+        }, false);
+
+        //ボタンが押されたら表示非表示　（勝利画面 から ED すすむ）
+        win_display_front.addEventListener("click", e => {
+            win_display.style.display = "none"
+            win_display_ED.style.display = "block"
+        }, false);
+
+
+        //ボタンが押されたら表示非表示　（敗北画面 から ED すすむ）
+        lose_display_front.addEventListener("click", e => {
+            lose_display.style.display = "none"
+            lose_display_ED.style.display = "block"
+        }, false);
+
+
+        //ボタンが押されたら表示非表示　（プレイヤー から 敗北画面 すすむ）
+        mainstage_monster_lose_words.addEventListener("click", e => {
+            mainstage.style.display = "none"
+            lose_display.style.display = "block"
+            mainstage_score.style.display = "none"
+            mainstage_damage.style.display = "none"
+            mainstage_turn_next.style.display = "block"
+            mainstage_effect_monster_fire.style.display = "none"
+            mainstage_effect_monster_darkness.style.display = "none"
+            mainstage_effect_monster_grass.style.display = "none"
+            mainstage_effect_monster_ice.style.display = "none"
+            mainstage_effect_monster_light.style.display = "none"
+            mainstage_effect_monster_poison.style.display = "none"
+            mainstage_effect_monster_rock.style.display = "none"
+            mainstage_effect_monster_thunder.style.display = "none"
+            mainstage_effect_monster_water.style.display = "none"
+            mainstage_effect_monster_wind.style.display = "none"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（勝利ED画面 から ED すすむ）
+        win_display_ED_front.addEventListener("click", e => {
+            win_display_ED.style.display = "none"
+            ED.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（敗北ED画面 から ED すすむ）
+        lose_display_ED_front.addEventListener("click", e => {
+            lose_display_ED.style.display = "none"
+            ED.style.display = "block"
+        }, false);
+
+
+
+
+        //ボタンが押されたら表示非表示　（ED から スタート画面 すすむ）
+        ED_front.addEventListener("click", e => {
+            ED.style.display = "none"
+            startscreen.style.display = "block"
+            window.location.reload();
+        }, false);
+
+
+
+
+    </script>
+</body>
+
+
+
+
+</html>
